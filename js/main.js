@@ -101,6 +101,14 @@
 		});
 	}
 
+	/*--/ Star Video facade /--*/
+	$('.video-facade').on('click', '.video-play', function () {
+		var facade = $(this).closest('.video-facade');
+		var videoId = facade.attr('data-video-id');
+		facade.html('<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/' + videoId +
+			'?autoplay=1&rel=0" title="ThinQr AI walkthrough" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+	});
+
 	/*--/ Testimonials owl /--*/
 	$('#testimonial-mf').owlCarousel({
 		margin: 20,
